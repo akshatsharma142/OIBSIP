@@ -1,1 +1,152 @@
-<!doctype html><html><head><meta charset=utf-8><title>Login</title><link rel=stylesheet href=css/style.css></head><body><div class=card><h2>Welcome Back</h2><form id=loginForm><input id=user placeholder='Username or Email'><div class=row><input id=pass type=password placeholder=Password><button type=button onclick="pass.type=pass.type==='password'?'text':'password'">👁</button></div><label><input type=checkbox id=remember> Remember me</label><button>Login</button><p id=msg class=msg></p></form><p>No account? <a href=register.html>Create one</a></p></div><script src=js/hash.js></script><script src=js/login.js></script></body></html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Login</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Animated Background -->
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+
+    <!-- Toast -->
+    <div id="toast" class="toast"></div>
+
+    <!-- Login Card -->
+    <div class="card">
+
+        <h1>
+            <i class="fa-solid fa-lock"></i>
+        </h1>
+
+        <h2>Welcome Back</h2>
+
+        <p class="subtitle">
+            Sign in to continue
+        </p>
+
+        <form id="loginForm">
+
+            <!-- Username / Email -->
+            <div class="input-group">
+
+                <label for="loginUser">
+                    Username or Email
+                </label>
+
+                <input
+                    type="text"
+                    id="loginUser"
+                    placeholder="Enter username or email"
+                    required>
+
+            </div>
+
+            <!-- Password -->
+            <div class="input-group">
+
+                <label for="loginPassword">
+                    Password
+                </label>
+
+                <div class="password-box">
+
+                    <input
+                        type="password"
+                        id="loginPassword"
+                        placeholder="Enter password"
+                        required>
+
+                    <span id="toggleLoginPassword">
+                        <i class="fa-solid fa-eye"></i>
+                    </span>
+
+                </div>
+
+            </div>
+
+            <!-- Remember Me + Forgot Password -->
+            <div class="options">
+
+                <label class="remember">
+
+                    <input type="checkbox" id="rememberMe">
+
+                    Remember Me
+
+                </label>
+
+                <a href="#" id="forgotPassword">
+
+                    Forgot Password?
+
+                </a>
+
+            </div>
+
+            <!-- Login Button -->
+            <button
+                type="submit"
+                class="btn"
+                id="loginBtn">
+
+                Login
+
+            </button>
+
+            <!-- Error Message -->
+            <p id="loginMessage" class="error"></p>
+
+        </form>
+
+        <div class="link">
+
+            Don't have an account?
+
+            <a href="register.html">
+
+                Register
+
+            </a>
+
+        </div>
+
+    </div>
+
+    <!-- Scripts -->
+
+   <script>
+
+document
+.getElementById("toggleLoginPassword")
+.addEventListener("click", () => {
+
+    togglePassword(
+        "loginPassword",
+        "toggleLoginPassword"
+    );
+
+});
+
+</script>
+<script src="js/hash.js"></script>
+<script src="js/storage.js"></script>
+<script src="js/validation.js"></script>
+<script src="js/toast.js"></script>
+<script src="js/login.js"></script>
+</body>
+
+</html>

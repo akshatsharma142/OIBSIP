@@ -1,1 +1,181 @@
-<!doctype html><html><head><meta charset=utf-8><title>Dashboard</title><link rel=stylesheet href=css/style.css></head><body><div class=card><h1>Dashboard</h1><p>Welcome, <b id=welcome></b></p><p>This is a protected page.</p><button id=logout>Logout</button></div><script src=js/dashboard.js></script></body></html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Dashboard</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+<body>
+
+    <!-- Background -->
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+
+    <!-- Toast -->
+    <div id="toast" class="toast"></div>
+
+    <div class="dashboard">
+
+        <!-- Sidebar -->
+
+        <aside class="sidebar">
+
+            <div class="logo">
+
+                <i class="fa-solid fa-shield-halved"></i>
+
+                <h2>Auth System</h2>
+
+            </div>
+
+            <ul>
+
+                <li class="active">
+
+                    <i class="fa-solid fa-house"></i>
+
+                    Dashboard
+
+                </li>
+
+                <li>
+
+                    <i class="fa-solid fa-user"></i>
+
+                    Profile
+
+                </li>
+
+                <li>
+
+                    <i class="fa-solid fa-gear"></i>
+
+                    Settings
+
+                </li>
+
+            </ul>
+
+            <button id="logoutBtn" class="logout-btn">
+
+                <i class="fa-solid fa-right-from-bracket"></i>
+
+                Logout
+
+            </button>
+
+        </aside>
+
+        <!-- Main Content -->
+
+        <main class="content">
+
+            <div class="welcome-card">
+
+                <h1>
+
+                    Welcome,
+
+                    <span id="usernameDisplay"></span>
+
+                    👋
+
+                </h1>
+
+                <p>
+
+                    You have successfully logged in.
+
+                </p>
+
+            </div>
+
+            <!-- Stats -->
+
+            <div class="stats">
+
+                <div class="stat-card">
+
+                    <i class="fa-solid fa-users"></i>
+
+                    <h3 id="userCount">0</h3>
+
+                    <p>Registered Users</p>
+
+                </div>
+
+                <div class="stat-card">
+
+                    <i class="fa-solid fa-clock"></i>
+
+                    <h3 id="loginTime">--</h3>
+
+                    <p>Login Time</p>
+
+                </div>
+
+                <div class="stat-card">
+
+                    <i class="fa-solid fa-calendar-days"></i>
+
+                    <h3 id="currentDate">--</h3>
+
+                    <p>Today's Date</p>
+
+                </div>
+
+            </div>
+
+            <!-- Profile -->
+
+            <div class="profile-card">
+
+                <div class="avatar">
+
+                    <i class="fa-solid fa-user"></i>
+
+                </div>
+
+                <div>
+
+                    <h2 id="profileName">
+
+                        User
+
+                    </h2>
+
+                    <p id="profileEmail">
+
+                        user@email.com
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </main>
+
+    </div>
+
+    <script src="js/toast.js"></script>
+
+    <script src="js/dashboard.js"></script>
+
+</body>
+
+</html>

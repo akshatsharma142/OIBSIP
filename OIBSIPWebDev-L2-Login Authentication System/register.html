@@ -1,1 +1,178 @@
-<!doctype html><html><head><meta charset=utf-8><title>Register</title><link rel=stylesheet href=css/style.css></head><body><div class=card><h2>Create Account</h2><form id=regForm><input id=user placeholder=Username><input id=email placeholder=Email><div class=row><input id=pass type=password placeholder=Password><button type=button onclick="pass.type=pass.type==='password'?'text':'password'">👁</button></div><button>Register</button><p id=msg class=msg></p></form><p><a href=index.html>Back to Login</a></p></div><script src=js/hash.js></script><script src=js/register.js></script></body></html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Create Account</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Floating Background -->
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+
+    <!-- Toast -->
+    <div id="toast" class="toast"></div>
+
+    <!-- Card -->
+    <div class="card">
+
+        <h1>
+            <i class="fa-solid fa-user-plus"></i>
+        </h1>
+
+        <h2>Create Account</h2>
+
+        <p class="subtitle">
+            Register to continue
+        </p>
+
+        <form id="registerForm">
+
+            <!-- Username -->
+            <div class="input-group">
+
+                <label for="username">
+                    Username
+                </label>
+
+                <input
+                    type="text"
+                    id="username"
+                    placeholder="Enter your username"
+                    required>
+
+            </div>
+
+            <!-- Email -->
+            <div class="input-group">
+
+                <label for="email">
+                    Email Address
+                </label>
+
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="Enter your email"
+                    required>
+
+            </div>
+
+            <!-- Password -->
+            <div class="input-group">
+
+                <label for="password">
+                    Password
+                </label>
+
+                <div class="password-box">
+
+                    <input
+                        type="password"
+                        id="password"
+                        placeholder="Create password"
+                        required>
+
+                    <span id="togglePassword">
+                        <i class="fa-solid fa-eye"></i>
+                    </span>
+
+                </div>
+
+                <!-- Password Strength -->
+                <div class="strength">
+
+                    <div id="strengthBar"></div>
+
+                </div>
+
+                <small id="strengthText">
+                    Minimum 8 characters & one number
+                </small>
+
+            </div>
+
+            <!-- Confirm Password -->
+            <div class="input-group">
+
+                <label for="confirmPassword">
+                    Confirm Password
+                </label>
+
+                <input
+                    type="password"
+                    id="confirmPassword"
+                    placeholder="Re-enter password"
+                    required>
+
+            </div>
+
+            <!-- Register Button -->
+            <button class="btn" type="submit">
+
+                Create Account
+
+            </button>
+
+            <!-- Message -->
+            <p id="message" class="error"></p>
+
+        </form>
+
+        <div class="link">
+
+            Already have an account?
+
+            <a href="index.html">
+
+                Login
+
+            </a>
+
+        </div>
+
+    </div>
+
+    <!-- Scripts -->
+
+   <script>
+const password =
+document.getElementById("password");
+
+password.addEventListener("input", () => {
+
+    updateStrength(password.value);
+
+});
+
+document
+.getElementById("togglePassword")
+.addEventListener("click", () => {
+
+    togglePassword(
+        "password",
+        "togglePassword"
+    );
+
+});
+</script>
+<script src="js/hash.js"></script>
+<script src="js/storage.js"></script>
+<script src="js/validation.js"></script>
+<script src="js/toast.js"></script>
+<script src="js/register.js"></script>
+</body>
+
+</html>
