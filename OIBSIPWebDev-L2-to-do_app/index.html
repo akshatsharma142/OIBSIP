@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart To-Do List</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <!-- ================= HEADER ================= -->
+
+        <header>
+            <h1>📝 Smart To-Do List</h1>
+            <p>Stay organized and boost your productivity.</p>
+        </header>
+
+        <!-- ================= ADD TASK ================= -->
+
+        <section class="task-input">
+
+            <input
+                type="text"
+                id="taskInput"
+                placeholder="Enter a new task..."
+            >
+
+            <button id="addBtn">
+                Add Task
+            </button>
+
+        </section>
+
+        <!-- ================= PENDING ================= -->
+
+        <section class="task-section">
+
+            <div class="section-header">
+
+                <h2>Pending Tasks</h2>
+
+                <span class="counter" id="pendingCount">
+                    0 Pending
+                </span>
+
+            </div>
+
+            <p
+                class="empty-message"
+                id="pendingEmpty"
+            >
+                🎉 No pending tasks. Enjoy your day!
+            </p>
+
+            <div
+                class="task-list"
+                id="pendingList"
+            ></div>
+
+        </section>
+
+        <!-- ================= COMPLETED ================= -->
+
+        <section class="task-section">
+
+            <div class="section-header">
+
+                <h2>Completed Tasks</h2>
+
+                <span class="counter completed" id="completedCount">
+                    0 Completed
+                </span>
+
+            </div>
+
+            <p
+                class="empty-message"
+                id="completedEmpty"
+            >
+                No completed tasks yet.
+            </p>
+
+            <div
+                class="task-list"
+                id="completedList"
+            ></div>
+
+        </section>
+
+    </div>
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <p>
+            Built with ❤️ using HTML, CSS & JavaScript
+        </p>
+
+    </footer>
+
+    <!-- JavaScript -->
+
+    <script src="script.js"></script>
+
+</body>
+</html>
