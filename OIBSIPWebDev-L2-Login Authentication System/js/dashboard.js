@@ -1,0 +1,1 @@
+const s=JSON.parse(localStorage.session||'null');if(!s)location='index.html';else welcome.textContent=s.user;logout.onclick=()=>{localStorage.removeItem('session');location='index.html'};
